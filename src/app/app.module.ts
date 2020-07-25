@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent
   ],
@@ -13,6 +14,6 @@ import { AppComponent } from './components/app/app.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

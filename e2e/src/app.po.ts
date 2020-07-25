@@ -1,11 +1,13 @@
+// tslint:disable:promise-function-async
+// tslint:disable-next-line:no-implicit-dependencies
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
-  navigateTo(): Promise<unknown> {
+  public navigateTo(): Promise<unknown> {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  getTitleText(): Promise<string> {
+  public getTitleText(): Promise<string> {
     return element(by.css('app .content span')).getText() as Promise<string>;
   }
 }
