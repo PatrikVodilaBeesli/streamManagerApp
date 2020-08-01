@@ -1,0 +1,23 @@
+<p>twitch-chat works!</p>
+<ul *ngFor="let value of this.values">
+  <li *ngIf="!value.isDeleted">
+    <span>
+      <span *ngIf="value.userState.badges">
+        <span *ngIf="value.userState.badges.broadcaster">
+          <img src="../../../assets/M_in_circle.png" style="width: 1em;" />
+        </span>
+      </span>
+      <span>{{ value.userState.username + "\t" }}</span>
+      <span>:</span>
+      <span>{{ value.message }}</span>
+    </span>
+    <button
+      (click)="
+        twitchRemoveMessage(vodas3Client, value.userState.id);
+        value.isDeleted = true
+      "
+    >
+      remove
+    </button>
+  </li>
+</ul>

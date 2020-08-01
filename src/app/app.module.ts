@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
+import { TwitchChatComponent } from './components/twitch-chat/twitch-chat.component';
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent
+    AppComponent,
+    TwitchChatComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
 })
